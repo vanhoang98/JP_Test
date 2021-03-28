@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -26,8 +26,23 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function roles() 
+    public function role() 
     {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsTo(Role::class);
+    }
+
+    public function results() 
+    {
+        return $this->hasMany(Result::class);
+    }
+
+    public function level() 
+    {
+        return $this->belongsTo(Level::class);
+    }
+
+    public function posts() 
+    {
+        return $this->hasMany(Post::class);
     }
 }
