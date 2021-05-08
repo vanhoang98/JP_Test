@@ -12,3 +12,6 @@ npm-debug.log
 yarn-error.log
 /public/admin-lte
 /public/template
+/public/css
+/public/js
+/public/vendor

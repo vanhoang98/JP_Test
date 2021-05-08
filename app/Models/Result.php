@@ -3,21 +3,22 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Question extends Model
+class Result extends Model
 {
     use SoftDeletes;
 
     protected $fillable = [
+        'user_id',
         'test_id',
-        'content',
-        'answer_a',
-        'answer_b',
-        'answer_c',
-        'answer_d',
-        'answer',
-        'image'
+        'point'
     ];
+
+    public function user() 
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function test() 
     {
