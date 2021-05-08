@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Test extends Model
 {
@@ -19,9 +20,9 @@ class Test extends Model
         return $this->belongsTo(Round::class);
     }
 
-    public function type() 
+    public function category() 
     {
-        return $this->belongsTo(Type::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function results() 
