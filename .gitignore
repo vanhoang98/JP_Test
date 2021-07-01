@@ -10,8 +10,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/public/admin-lte
-/public/template
-/public/css
-/public/js
-/public/vendor
+.idea
+.DS_Store
+/public/uploads

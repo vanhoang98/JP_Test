@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Http\Requests\CategoryRequest;
-use App\Http\Requests\CategoryPostRequest;
-use RealRashid\SweetAlert\Facades\Alert;
-use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -17,75 +13,48 @@ class CategoryController extends Controller
             toast(session('success_title'), 'success');
         }
 
-        $categoriesTest = Category::latest()->where('type', config('const.test'))->get();
-        $categoriesPost = Category::latest()->where('type', config('const.post'))->get();
+        $categories = Category::orderBy('id','desc')->get();
 
-        return view('admin.categories.test.index', compact(['categoriesTest', 'categoriesPost']));
+        return view("backend.categories.list", compact('categories'));
     }
 
-    public function store(CategoryRequest $request)
+    public function getAdd()
     {
-        $data= [
-            'name' => $request->name,
-            'description' => $request->description,
-            'type' => config('const.test'),
-        ];
-
-        Category::create($data);
-
-        return redirect()->route('categories.index')->withSuccessTitle(trans('home.create_category_test'));
+        return view("backend.categories.add");
     }
 
-    public function storePost(CategoryPostRequest $request)
+    public function postAdd(Request  $request)
     {
-        $data_post = [
-            'name' => $request->name_post,
-            'slag' => Str::slug($request->name_post),
-            'description' => $request->description_post,
-            'type' => config('const.post'),
-        ];
+        $cate = new Category();
+        $cate->name = $request->name;
+        $cate->slug = str_slug($request->name);
+        $cate->save();
 
-        Category::create($data_post);
-
-        return redirect()->route('categories.index')->withSuccessTitle(trans('home.create_category_post'));
+        return redirect()->route('categories.list')->withSuccessTitle('Thêm thể loại bài viết thành công');
     }
 
-    public function update(Request $request)
+    public function getEdit($id)
     {
-        try {
-            $category = Category::findOrFail($request->id);
-        } catch (ModelNotFoundException $exception) {
+        $categories = Category::find($id);
 
-            return view('404');
-        }
-
-        $category->update($request->all());
-
-        return redirect()->route('categories.index')->withSuccessTitle(trans('home.edit_category'));
+        return view("backend.categories.edit", compact('categories'));
     }
 
-    public function updatePost(Request $request)
+    public function postEdit(Request  $request, $id)
     {
-        try {
-            $category = Category::findOrFail($request->id);
-        } catch (ModelNotFoundException $exception) {
+        $cate = Category::find($id);
+        $cate->name = $request->name;
+        $cate->slug = str_slug($request->name);
+        $cate->save();
 
-            return view('404');
-        }
-
-        $category->name = $request->name_post;
-        $category->slag = Str::slug($request->name_post);
-        $category->description = $request->description_post;
-
-        $category->save();
-
-        return redirect()->route('categories.index')->withSuccessTitle(trans('home.edit_category'));
+        return redirect()->route('categories.list')->withSuccessTitle('Sửa thể loại bài viết thành công');
     }
 
-    public function destroy(Category $category)
+    public function getdel($id)
     {
-        $category->delete();
+        $cate = Category::find($id);
+        $cate->delete();
 
-        return redirect()->route('categories.index')->withSuccessTitle(trans('home.delete_category'));
+        return redirect()->route('categories.list')->withSuccessTitle('Xóa thể loại bài viết thành công');
     }
 }
