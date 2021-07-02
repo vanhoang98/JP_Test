@@ -15,12 +15,12 @@ class CreateQuestionTable extends Migration
     {
         Schema::create('question', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('name');
-            $table->unsignedInteger('test_id');
-            $table->text('answera');
-            $table->text('answerb');
-            $table->text('answerc');
-            $table->text('answerd');
+            $table->text('name')->nullable();
+            $table->unsignedInteger('test_id')->nullable();
+            $table->text('answera')->nullable();
+            $table->text('answerb')->nullable();
+            $table->text('answerc')->nullable();
+            $table->text('answerd')->nullable();
             $table->text('answer_true');
             $table->timestamps();
         });

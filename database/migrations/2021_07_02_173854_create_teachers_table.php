@@ -18,11 +18,11 @@ class CreateTeachersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->text('password');
-            $table->date('date_of_birth');
-            $table->tinyInteger('sex');
-            $table->text('cv');
-            $table->string('phone');
-            $table->tinyInteger('status');
+            $table->date('date_of_birth')->nullable();
+            $table->tinyInteger('sex')->nullable();
+            $table->text('cv')->nullable();
+            $table->string('phone')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }

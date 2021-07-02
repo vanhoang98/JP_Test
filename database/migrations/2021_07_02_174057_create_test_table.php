@@ -15,14 +15,14 @@ class CreateTestTable extends Migration
     {
         Schema::create('test', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('name');
-            $table->text('slug');
-            $table->unsignedInteger('round_id');
-            $table->unsignedInteger('teacher_id');
-            $table->unsignedInteger('cate_test_id');
-            $table->text('video_fix');
-            $table->integer('number_questions');
-            $table->double('time');
+            $table->text('name')->nullable();
+            $table->text('slug')->nullable();
+            $table->unsignedInteger('round_id')->nullable();
+            $table->unsignedInteger('teacher_id')->nullable();
+            $table->unsignedInteger('cate_test_id')->nullable();
+            $table->text('video_fix')->nullable();
+            $table->integer('number_questions')->nullable();
+            $table->double('time')->nullable();
             $table->timestamps();
         });
     }

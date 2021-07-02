@@ -15,10 +15,10 @@ class CreateUserPassRoundTable extends Migration
     {
         Schema::create('user_pass_round', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedInteger('round_id');
-            $table->integer('point');
-            $table->integer('time');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedInteger('round_id')->nullable();
+            $table->integer('point')->nullable();
+            $table->integer('time')->nullable();
             $table->timestamps();
         });
     }
