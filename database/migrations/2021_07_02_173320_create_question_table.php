@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFeedbackTable extends Migration
+class CreateQuestionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateFeedbackTable extends Migration
      */
     public function up()
     {
-        Schema::create('feedback', function (Blueprint $table) {
+        Schema::create('question', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('user_id');
-            $table->text('content');
-            $table->tinyInteger('status')->nullable();
+            $table->text('name');
+            $table->unsignedInteger('test_id');
+            $table->text('answera');
+            $table->text('answerb');
+            $table->text('answerc');
+            $table->text('answerd');
+            $table->text('answer_true');
             $table->timestamps();
         });
     }
@@ -29,6 +33,6 @@ class CreateFeedbackTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('feedback');
+        Schema::dropIfExists('question');
     }
 }
