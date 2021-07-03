@@ -60,7 +60,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = 'https://jpt-project.herokuapp.com/ckfinder/userfiles/';
+$baseUrl = 'https://jpt-project.herokuapp.com/userfiles/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
