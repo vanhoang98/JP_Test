@@ -7,6 +7,7 @@ use App\Round;
 use App\Teacher;
 use App\Test;
 use Illuminate\Http\Request;
+use App\Http\Requests\TestRequest;
 use Auth;
 
 class TestController extends Controller
@@ -31,7 +32,7 @@ class TestController extends Controller
         return view("backend.tests.add", compact('round','cate_tests','teachers'));
     }
 
-    public function postAdd(Request $request)
+    public function postAdd(TestRequest $request)
     {
         $test = new Test();
         $test->name = $request->name;
