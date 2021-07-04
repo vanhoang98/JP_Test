@@ -60,7 +60,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = '/ckfinder/userfiles/';
+$baseUrl = 'https://jpt-project.herokuapp.com/ckfinder/userfiles/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
@@ -79,7 +79,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseDir = resolveUrl($baseUrl);
+$baseDir = 'https://jpt-project.herokuapp.com/userfiles/';
 
 /*
  * ### Advanced Settings
