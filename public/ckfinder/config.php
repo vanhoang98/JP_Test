@@ -90,8 +90,8 @@ Thumbnails : thumbnails settings. All thumbnails will end up in the same
 directory, no matter the resource type.
 */
 $config['Thumbnails'] = Array(
-		'url' => $baseUrl . '_thumbs',
-		'directory' => $baseDir . '_thumbs',
+		'url' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/_thumbs',
+		'directory' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/_thumbs',
 		'enabled' => true,
 		'directAccess' => false,
 		'maxWidth' => 100,
@@ -202,16 +202,16 @@ $config['ResourceType'][] = Array(
 
 $config['ResourceType'][] = Array(
 		'name' => 'Images',
-		'url' => $baseUrl . 'images',
-		'directory' => $baseDir . 'images',
+		'url' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/images',
+		'directory' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/images',
 		'maxSize' => 0,
 		'allowedExtensions' => 'bmp,gif,jpeg,jpg,png',
 		'deniedExtensions' => '');
 
 $config['ResourceType'][] = Array(
 		'name' => 'Flash',
-		'url' => $baseUrl . 'flash',
-		'directory' => $baseDir . 'flash',
+		'url' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/flash',
+		'directory' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/flash',
 		'maxSize' => 0,
 		'allowedExtensions' => 'swf,flv',
 		'deniedExtensions' => '');
