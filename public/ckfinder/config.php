@@ -79,7 +79,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseDir = 'https://jpt-project.herokuapp.com/userfiles/';
+$baseDir = 'https://jpt-project.herokuapp.com/ckfinder/userfiles/';
 
 /*
  * ### Advanced Settings
