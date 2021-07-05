@@ -39,6 +39,12 @@
                 </li>
 
                 <li>
+                    <a href="{{ route('question_training.list') }}">
+                        <i class="fa fa-question"></i> <span>Quản lý câu hỏi thi tự do</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="{{ route('categories.list') }}">
                         <i class="fa fa-map-o"></i> <span>Quản lý thể loại bài viết</span>
                     </a>

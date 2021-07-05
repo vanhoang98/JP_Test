@@ -207,3 +207,12 @@
 .update-account:focus {
     outline: none;
 }
+
+.correct {
+    color: green;
+    font-weight: 700;
+}
+
+.error {
+    color: red
+}

@@ -14,7 +14,9 @@ use App\User;
 use App\Feedback;
 use App\UserPassRound;
 use App\UserQuestion;
+use App\CateTest;
 use App\Round;
+use App\QuestionTraining;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
@@ -473,5 +475,26 @@ class PageController extends Controller
 
         return redirect()->back()->withSuccessTitle('Gửi góp ý thành công');
  
+    }
+
+    public function training()
+    {
+        if (!Auth::guard('web')->check()) {
+            return redirect()->route('user.login');
+        } else {
+            $cate_tests = CateTest::all();
+
+            return view('frontend.pages.training', compact('cate_tests'));
+        }
+    }
+
+    public function postTraining(Request $request)
+    {
+        $data = QuestionTraining::with('cate')
+        ->where('level', $request->level)
+        ->where('cate_test_id', $request->cate_test)
+        ->get()->random($request->qty)->values()->shuffle();
+
+        return redirect()->route('training')->with(['data' => $data]);
     }
 }

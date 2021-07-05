@@ -30,25 +30,6 @@
     <script src="{{ asset('libjs/Loading.js') }}"></script>
     <script src="{{ asset('Themes/v1/js/SessionUpdater.js') }}"></script>
     <script src="{{ asset('Themes/v1/js/IOEMain47b3.js') }}"></script>
-
-    <!-- BEGIN INIT GOZONE -->
-    <script type="text/javascript">
-        var OA_zones = {
-            'ioe.vn - 728*90_top_xuyen_trang': 1,
-            '300x250': 2,
-            'pc_tintuc_728x90': 4,
-            'pc_mid_970x90_970x70_728x90': 5,
-            'pc_tuluyen_728x90': 6,
-            'pc_thithu_mid1_728x90': 7,
-            'pc_mid_970x50_970x90_970x70_728x90': 8,
-            'mb_footer_320x100_320x50': 11,
-            'left_ioe': 12,
-            'right_ioe': 13,
-            'ads_nologin': 17,
-            'ads_center': 18,
-        };
-
-    </script>
 </head>
 <body>
     @include('sweetalert::alert')
@@ -59,18 +40,9 @@
 </noscript>
 <!--facebook tracking-->
 <div id="fb-root"></div>
-<script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "../../connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=968885413151999";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
 <input type="hidden" id="RequestVerificationToken" name="RequestVerificationToken"
        value="CfDJ8A4n7LdbXjJIlwAIFHg9CkRDwvhCcTwVXBnN3K6ml99vNZaqYrPu-ukwvFpagA0th_eKAZKko7Csl9BY1V1Ce7btzWO5V4x0ZvDIcr1leqwYIn-7ZpbpEHWugEidHxwOaTTDT4P_ZSFG_NT036_gBNI">
-<input type="hidden" id="KeepSessionAliveUrl" value="https://ioe.vn/home/keepsessionalive"/>
 <form action="{{route('login')}}" method="POST">
     @csrf
     <div class="login-page">
@@ -154,15 +126,6 @@
 
     </div><!--END login-page-->
 </form>
-<script src="../Themes/v1/js/userPagesaaa5.js?v=TrIuwDkSIG2uKD-_o9zNtPrfyedFJalbmVqLegurU60"></script>
-<script src="../Themes/v1/js/wow.min.js"></script>
-<script>
-    new WOW().init();
-    IOEMain.Init();
-    userPages.Init();
-</script>
-
-
 </body>
 
 </html>

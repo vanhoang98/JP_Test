@@ -70,17 +70,7 @@
 <script src="{{ asset('Themes/v1/js/ioeHeader1954.js') }}"></script>
 <script src="{{ asset('Themes/v1/js/ioecv20ce.js') }}"></script>
 <script src="{{ asset('Themes/v1/js/ioeFooter1824.js') }}"></script>
-
-<script>
-    ioeHeader.Init();
-    ioeFooter.Init();
-</script>
-
 <script src="{{ asset('Themes/v1/js/wow.min.js') }}"></script>
-<script>
-    new WOW().init();
-    IOEMain.Init();
-</script>
 
 </body>
 

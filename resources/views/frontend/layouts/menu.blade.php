@@ -14,6 +14,10 @@
                             </li>
 
                             <li class="nav-item dropdown">
+                                <a class="ioe-nav-link" href="{{ route('training') }}">Luyện thi tự do</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
                                 <a class="ioe-nav-link" href="{{ route('results') }}">Kết quả thi</a>
                             </li>
 

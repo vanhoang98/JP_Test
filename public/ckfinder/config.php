@@ -60,7 +60,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = 'https://jpt-project.herokuapp.com/ckfinder/userfiles/';
+$baseUrl = '/ckfinder/userfiles/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
@@ -79,7 +79,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseDir = 'https://jpt-project.herokuapp.com/ckfinder/userfiles/';
+$baseDir = resolveUrl($baseUrl);
 
 /*
  * ### Advanced Settings
@@ -90,8 +90,8 @@ Thumbnails : thumbnails settings. All thumbnails will end up in the same
 directory, no matter the resource type.
 */
 $config['Thumbnails'] = Array(
-		'url' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/_thumbs',
-		'directory' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/_thumbs',
+		'url' => $baseUrl . '_thumbs',
+		'directory' => $baseDir . '_thumbs',
 		'enabled' => true,
 		'directAccess' => false,
 		'maxWidth' => 100,
@@ -194,24 +194,24 @@ $config['DefaultResourceTypes'] = '';
 
 $config['ResourceType'][] = Array(
 		'name' => 'Files',				// Single quotes not allowed
-		'url' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/files',
-		'directory' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/files',
+		'url' => $baseUrl . 'files',
+		'directory' => $baseDir . 'files',
 		'maxSize' => 0,
 		'allowedExtensions' => '7z,aiff,asf,avi,bmp,csv,doc,docx,fla,flv,gif,gz,gzip,jpeg,jpg,mid,mov,mp3,mp4,mpc,mpeg,mpg,ods,odt,pdf,png,ppt,pptx,qt,ram,rar,rm,rmi,rmvb,rtf,sdc,swf,sxc,sxw,tar,tgz,tif,tiff,txt,vsd,wav,wma,wmv,xls,xlsx,zip',
 		'deniedExtensions' => '');
 
 $config['ResourceType'][] = Array(
 		'name' => 'Images',
-		'url' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/images',
-		'directory' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/images',
+		'url' => $baseUrl . 'images',
+		'directory' => $baseDir . 'images',
 		'maxSize' => 0,
 		'allowedExtensions' => 'bmp,gif,jpeg,jpg,png',
 		'deniedExtensions' => '');
 
 $config['ResourceType'][] = Array(
 		'name' => 'Flash',
-		'url' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/flash',
-		'directory' => 'https://jpt-project.herokuapp.com/ckfinder/userfiles/flash',
+		'url' => $baseUrl . 'flash',
+		'directory' => $baseDir . 'flash',
 		'maxSize' => 0,
 		'allowedExtensions' => 'swf,flv',
 		'deniedExtensions' => '');

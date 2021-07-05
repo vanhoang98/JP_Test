@@ -22,6 +22,8 @@ Route::get('/dang-ki-hoc-vien', 'PageController@getRegistrationStudent')->name('
 Route::post('/dang-ki-hoc-vien', 'PageController@postRegistrationStudent')->name('post_registration_student');
 
 Route::get('/tu-luyen', 'PageController@selfTraining')->name('self-training');
+Route::get('/thi-tu-do', 'PageController@training')->name('training');
+Route::post('/thi-tu-do', 'PageController@postTraining')->name('post.training');
 
 Route::get('/admin-login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::get('/dang-nhap', 'Auth\LoginController@showLoginForm')->name('user.login');
@@ -90,6 +92,15 @@ Route::group(['prefix' => 'admins', 'middleware' => ['admin']], function () {
         Route::get('/', 'FeedbackController@index')->name('admin.feedback');
         route::get("/saw/{id}", "FeedbackController@saw")->name("feedback.saw");
         route::get("/del/{id}", "FeedbackController@getdel")->name("feedback.delete");
+    });
+
+    Route::prefix('question-training')->group(function () {
+        Route::get('/', 'QuestionController@getQuestionTraining')->name('question_training.list');
+        Route::get('/add', 'QuestionController@getAddQuestionTraining')->name('question_training.get_add');
+        Route::post('/add', 'QuestionController@postAddQuestionTraining')->name('question_training.post_add');
+        route::get("/edit/{id}", "QuestionController@getEditQuestionTraining")->name("question_training.get_edit");
+        route::post("/edit/{id}", "QuestionController@postEditQuestionTraining")->name("question_training.post_edit");
+        route::get("/del/{id}", "QuestionController@getdelQuestionTraining")->name("question_training.delete");
     });
 
     Route::prefix('round')->group(function () {

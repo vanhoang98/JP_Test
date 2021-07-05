@@ -32,23 +32,4 @@
     <script src="{{ asset('libjs/Loading.js') }}"></script>
     <script src="{{ asset('Themes/v1/js/SessionUpdater.js') }}"></script>
     <script src="{{ asset('Themes/v1/js/IOEMain47b3.js') }}"></script>
-
-    <!-- BEGIN INIT GOZONE -->
-    <script type="text/javascript">
-        var OA_zones = {
-            'ioe.vn - 728*90_top_xuyen_trang': 1,
-            '300x250': 2,
-            'pc_tintuc_728x90': 4,
-            'pc_mid_970x90_970x70_728x90': 5,
-            'pc_tuluyen_728x90': 6,
-            'pc_thithu_mid1_728x90': 7,
-            'pc_mid_970x50_970x90_970x70_728x90': 8,
-            'mb_footer_320x100_320x50': 11,
-            'left_ioe': 12,
-            'right_ioe': 13,
-            'ads_nologin': 17,
-            'ads_center': 18,
-        };
-
-    </script>
 </head>
