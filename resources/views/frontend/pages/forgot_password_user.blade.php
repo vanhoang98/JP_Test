@@ -15,6 +15,7 @@
     <script src="{{ asset('libjs/pdfobject.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('libjs/bootstrap/dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('libjs/bootstrap/datepicker/css/bootstrap-datepicker.min.css') }}">
+    <link rel="icon" href="{{ asset("Themes/v1/images/logo_jpt.png") }}" type="image/gif" sizes="20x20">
     <script src="{{ asset('libjs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('libjs/bootstrap/datepicker/js/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('libjs/bootstrap/datepicker/locales/bootstrap-datepicker.vi.min.js') }}"></script>

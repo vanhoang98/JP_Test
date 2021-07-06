@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500%7CMaterial+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp">
+    <link rel="icon" href="{{ asset("Themes/v1/images/logo_jpt.png") }}" type="image/gif" sizes="20x20">
 
     <script src="{{ asset('libjs/jquery/dist/jquery.js') }}"></script>
     <script src="{{ asset('libjs/popper.js-1.15.0/dist/umd/popper.min.js') }}"></script>

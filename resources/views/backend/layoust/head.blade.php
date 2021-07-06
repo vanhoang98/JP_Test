@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset("backend/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css")}}">
     <link rel="stylesheet" href="{{ asset("backend/bower_components/select2/dist/css/select2.min.css") }}">
     <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <link rel="icon" href="{{ asset("Themes/v1/images/logo_jpt.png") }}" type="image/gif" sizes="20x20">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="{{ asset("backend/dist/css/AdminLTE.min.css") }}">

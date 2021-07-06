@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset("backend/bower_components/Ionicons/css/ionicons.min.css")}}">
     <link rel="stylesheet" href="{{ asset("backend/dist/css/AdminLTE.min.css")}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="icon" href="{{ asset("Themes/v1/images/logo_jpt.png") }}" type="image/gif" sizes="20x20">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
